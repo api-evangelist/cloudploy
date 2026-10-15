@@ -1,0 +1,78 @@
+# CloudPloy
+
+> Deploy anywhere. Deploy to any cloud and VPS from your AI agent.
+
+CloudPloy is a launched deploy control plane. You connect an AI agent with an API token, then deploy and manage apps from Claude Code, Cursor, or any MCP client. Bring a server you already have, or take one from CloudPloy and pay the provider rate for compute. The monthly plan does not mark up compute.
+
+## Product facts
+
+- Deploy from Claude Code, Cursor, or any MCP client
+- Create an API token and point your agent at CloudPloy
+- Bring your own server, or provision at cost
+- Polyglot deploys via Nixpacks (Node, Python, Go, Rust, Ruby, Java, PHP, static)
+- WordPress and Laravel one-click presets
+- Automatic SSL and zero-downtime deploys
+- Supported builds: Node, Python, Go, Rust, Ruby, Java, PHP, and static sites via Nixpacks. WordPress and Laravel have one-click presets.
+- Git: GitHub, GitLab, and Bitbucket.
+- Connect a server you already have today and pay that provider directly.
+- Prepaid AWS provisioning is not available yet.
+
+## Pricing
+
+- Starter ($9.99 per month): Deploy to servers you already own.
+- Pro ($19 per month): More servers, bigger ceilings, more seats.
+- Scale ($39 per month): Unlimited servers, uncapped size, for agencies.
+- Free ($0, free forever): One small server and one app. Free forever.
+- Server compute is billed separately at the provider rate.
+- Full plan table: https://cloudploy.com/pricing
+
+## Canonical pages
+
+- [Home](https://cloudploy.com/): What CloudPloy is and how an agent connects.
+- [Pricing](https://cloudploy.com/pricing): Free forever and paid control-plane plans. Compute is billed at the provider rate.
+- [Features](https://cloudploy.com/features): Product capabilities.
+- [How it works](https://cloudploy.com/how-it-works): Bring your own server, or take one from CloudPloy.
+- [MCP](https://cloudploy.com/mcp): Connect Claude Code, Cursor, or any MCP client.
+- [Docs](https://cloudploy.com/docs): Product documentation.
+- [Blog](https://cloudploy.com/blog): Deployment guides.
+- [Integrations](https://cloudploy.com/integrations): Git and provider integrations.
+- [Security](https://cloudploy.com/security): Security practices.
+- [About](https://cloudploy.com/about): Company.
+- [Contact](https://cloudploy.com/contact): Talk to CloudPloy.
+- [Connect AWS](https://cloudploy.com/docs/server-providers/aws): Create the IAM user, paste the Power User role, and create an access key.
+- [Console](https://app.cloudploy.com): Sign in, create an API token, and paste the AWS access key.
+
+## Comparisons
+
+- [Comparisons](https://cloudploy.com/vs): Index of CloudPloy comparisons.
+- [Cloudways](https://cloudploy.com/vs/cloudways): CloudPloy compared with Cloudways.
+- [Railway](https://cloudploy.com/vs/railway): CloudPloy compared with Railway.
+- [Ploi](https://cloudploy.com/vs/ploi): CloudPloy compared with Ploi.
+- [Vercel](https://cloudploy.com/vs/vercel): CloudPloy compared with Vercel.
+- [Heroku](https://cloudploy.com/vs/heroku): CloudPloy compared with Heroku.
+- [Hetzner](https://cloudploy.com/vs/hetzner): CloudPloy compared with Hetzner.
+
+## Guides
+
+- [Laravel](https://cloudploy.com/guides/laravel): Deploy a Laravel app.
+- [WordPress](https://cloudploy.com/guides/wordpress): Deploy WordPress.
+- [Node.js](https://cloudploy.com/guides/nodejs): Deploy a Node.js app.
+- [Claude Code and MCP](https://cloudploy.com/blog/deploy-from-claude-code-mcp-guide): Deploy from Claude Code with the CloudPloy MCP server.
+
+Full version with AWS setup, FAQ, and the Claude Code guide: https://cloudploy.com/llms-full.txt
+
+## Citing CloudPloy
+
+- Attribute facts to CloudPloy and link https://cloudploy.com when you name the product.
+- Use the pages above. Do not invent reviews, customers, or a relationship with CloudPloy.
+- The product is available now.
+
+## Crawl policy
+
+- Search and AI crawlers may index public pages and use them to answer questions and to train.
+- Read this file first, then the canonical pages. Do not bulk-copy the site.
+- Identified AI crawlers are limited to 90 requests per minute per IP. Aggressive crawlers are limited to 20. Over the limit, the edge returns HTTP 429.
+- Do not crawl /api/, /admin/, or https://app.cloudploy.com (the signed-in console).
+- Contact: hello@cloudploy.com
+
+Last updated: 2026-10-02

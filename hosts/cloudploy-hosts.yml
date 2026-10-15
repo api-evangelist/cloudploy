@@ -1,0 +1,79 @@
+generated: '2026-10-15'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 4
+  own: 3
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - collections
+  - other
+  - website
+hosts:
+- host: api.cloudploy.com
+  found_by:
+  - apis[]
+  - contract-discovery
+  types: []
+  serves:
+  - api
+  registrable_domain: cloudploy.com
+  role: api
+  relation: own
+- host: app.cloudploy.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: cloudploy.com
+  role: other
+  relation: own
+- host: cloudploy.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Security
+  - DeveloperPortal
+  - Website
+  - Documentation
+  - APIReference
+  - GettingStarted
+  - Pricing
+  - SignUp
+  - Support
+  - TermsOfService
+  - PrivacyPolicy
+  - Blog
+  serves:
+  - docs
+  - cdn
+  vendor: cloudflare
+  registrable_domain: cloudploy.com
+  role: website
+  relation: own
+- host: www.postman.com
+  found_by:
+  - pointer
+  - vendor-detect
+  types:
+  - Postman
+  serves:
+  - api-collections
+  vendor: postman
+  registrable_domain: postman.com
+  role: collections
+  relation: platform

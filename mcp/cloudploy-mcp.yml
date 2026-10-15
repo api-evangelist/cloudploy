@@ -1,0 +1,59 @@
+generated: '2026-10-15'
+method: derived
+generator: derive-mcp-candidate.py
+source:
+- openapi/_ae-authored/cloudploy-openapi-generated.yml
+status: candidate
+deployment:
+  mode: none
+  auth: unknown
+  verified: probed
+note: 'No MCP server was found. The pre-flight posted tools/list to /mcp on api.cloudploy.com, cloudploy.com, app.cloudploy.com; verdict gated
+  (https://app.cloudploy.com/mcp answered 401: the edge authenticates before it routes, which proves nothing either way). Candidate tools below
+  are derived from the 9 operation(s) in the provider''s own OpenAPI (9 listed); they describe what a server WOULD expose, not one that exists.'
+tools:
+- name: get_apps
+  operationId: get_apps
+  method: GET
+  path: /apps
+  description: List all applications
+- name: post_apps
+  operationId: post_apps
+  method: POST
+  path: /apps
+  description: Create new application
+- name: delete_apps_id
+  operationId: delete_apps_id
+  method: DELETE
+  path: /apps/{id}
+  description: Delete application
+- name: put_apps_id
+  operationId: put_apps_id
+  method: PUT
+  path: /apps/{id}
+  description: Update application settings
+- name: get_deployments
+  operationId: get_deployments
+  method: GET
+  path: /deployments
+  description: List deployment history
+- name: post_deployments
+  operationId: post_deployments
+  method: POST
+  path: /deployments
+  description: Trigger new deployment
+- name: get_deployments_id
+  operationId: get_deployments_id
+  method: GET
+  path: /deployments/{id}
+  description: Get deployment status
+- name: post_rollback
+  operationId: post_rollback
+  method: POST
+  path: /rollback
+  description: Rollback deployment
+- name: post_v1_apps
+  operationId: post_v1_apps
+  method: POST
+  path: /v1/apps
+  description: POST /v1/apps

@@ -1,28 +1,127 @@
 aid: cloudploy
+
 name: CloudPloy
-description: 'CloudPloy is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cloudploy.com/cloudploy-share-light-2026.png
+
+description: CloudPloy provides a platform that lets developers deploy applications to any cloud or VPS using AI agents. Through its MCP (Machine
+  Control Plane), users can manage servers, apps, and deployments via a RESTful API, enabling automation of the full lifecycle from provisioning
+  to scaling. The service offers a free tier with limited resources and paid plans for larger workloads, focusing on ease of use, security, and
+  integration with existing CI/CD pipelines.
+
 url: https://raw.githubusercontent.com/api-evangelist/cloudploy/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-15'
+
 modified: '2026-10-15'
+
 tags:
 - Company
-apis: []
+- Deployment
+- AI
+- Cloud
+- Automation
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Plans
+  url: plans/cloudploy-plans-pricing.yml
+- type: Spectral
+  url: rules/cloudploy-rules.yml
+- type: JSONLD
+  url: json-ld/cloudploy-context.jsonld
+- type: Vocabulary
+  url: vocabulary/cloudploy-vocabulary.yml
+- type: DataModel
+  url: data-model/cloudploy-data-model.yml
+- type: Conformance
+  url: conformance/cloudploy-conformance.yml
+- type: LLMsTxt
+  url: llms/cloudploy-llms.txt
+- type: WellKnown
+  url: well-known/cloudploy-well-known.yml
+- type: Hosts
+  url: hosts/cloudploy-hosts.yml
+- type: Vendors
+  url: vendors/cloudploy-vendors.yml
+- type: Security
+  url: https://cloudploy.com/security
+- type: DeveloperPortal
+  url: https://cloudploy.com/for/developers
+- type: DomainSecurity
+  url: security/cloudploy-domain-security.yml
 - type: Website
   url: https://cloudploy.com
 - type: Documentation
   url: https://cloudploy.com/docs
+- type: APIReference
+  url: https://cloudploy.com/docs/api
+- type: GettingStarted
+  url: https://cloudploy.com/docs
+- type: Pricing
+  url: https://cloudploy.com/pricing
+- type: SignUp
+  url: https://cloudploy.com
+- type: Support
+  url: https://cloudploy.com/contact
+- type: TermsOfService
+  url: https://cloudploy.com/terms
+- type: PrivacyPolicy
+  url: https://cloudploy.com/privacy
+- type: Blog
+  url: https://cloudploy.com/blog
+- type: Postman
+  url: https://www.postman.com/cloudploy/workspace
+
+apis:
+- aid: cloudploy:cloudploy-api
+  name: CloudPloy API
+  description: 'CloudPloy API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-10-15);
+    not the provider''s own document.'
+  humanURL: https://cloudploy.com/docs/api
+  baseURL: https://api.cloudploy.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/cloudploy-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-deployments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-apps-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-v1-apps-request-schema.json
+
 x-submission-notes: Deploy-from-agent control plane via MCP + API key
+
 x-submission-probe: root 200, docs 200, soft-404 OK; no OpenAPI found in docs page
+
 x-submitted-by: hello@cloudploy.com (apis.io/add, 2026-10-14)
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: API documentation page https://cloudploy.com/docs/api returns HTML with no OpenAPI or other machine-readable contract.
+  evidence:
+  - url: https://cloudploy.com/docs/api
+    status: 200
+  checked: '2026-10-15'
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 21
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

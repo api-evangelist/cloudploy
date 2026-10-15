@@ -1,0 +1,29 @@
+generated: '2026-10-15'
+method: probed
+source: https://cloudploy.com/privacy
+signals:
+  data_subject_request:
+    evidence:
+      - source: https://cloudploy.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "Access: Request access to your personal information"
+      - source: https://cloudploy.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "Know: Right to know what personal information is collected"
+    note: GDPR and CCPA rights for data subject requests.
+  incident_notification:
+    evidence:
+      - source: https://cloudploy.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "Incident response procedures are documented and followed to address security incidents promptly."
+    note: Indicates procedures for handling security incidents.
+  data_retention:
+    evidence:
+      - source: https://cloudploy.com/privacy
+        http_status: 200
+        fetched: "true"
+        quote: "We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law."
+    note: Describes their data retention policy.
