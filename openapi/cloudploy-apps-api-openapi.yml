@@ -1,0 +1,128 @@
+openapi: 3.2.0
+info:
+  title: CloudPloy Apps API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 9 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; CloudPloy has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 8
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://cloudploy.com/docs/api
+servers:
+- url: https://api.cloudploy.com
+security:
+- bearer: []
+tags:
+- name: Apps
+paths:
+  /apps:
+    get:
+      operationId: get_apps
+      tags:
+      - Apps
+      summary: List all applications
+      x-source: https://cloudploy.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_apps
+      tags:
+      - Apps
+      summary: Create new application
+      x-source: https://cloudploy.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostAppsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /apps/{id}:
+    delete:
+      operationId: delete_apps_id
+      tags:
+      - Apps
+      summary: Delete application
+      x-source: https://cloudploy.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_apps_id
+      tags:
+      - Apps
+      summary: Update application settings
+      x-source: https://cloudploy.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /v1/apps:
+    post:
+      operationId: post_v1_apps
+      tags:
+      - Apps
+      summary: POST /v1/apps
+      x-source: https://cloudploy.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostV1AppsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: 'curl -H "Authorization: Bearer YOUR_API_TOKEN"  https://api.cloudploy.com/v1/apps Deploy Application curl -X POST  -H "Authorization: Bearer YOUR_API_TOKEN"  -d ''{"repo": "username/repo"}''  https://api.cloudploy.com/v1/deployments Core Endpoints GET /apps List all applications POST /apps Create new application PUT /apps/:id Update application settings DELETE /apps/:id Delete application Deployment'
+components:
+  schemas:
+    PostAppsRequest:
+      type: object
+      properties:
+        repo:
+          type: string
+          description: Repository identifier, e.g., "username/repo"
+      required:
+      - repo
+    PostV1AppsRequest:
+      type: object
+      properties:
+        repo:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

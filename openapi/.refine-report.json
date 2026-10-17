@@ -1,0 +1,20 @@
+{
+  "provider": "cloudploy",
+  "sources": [
+    "_ae-authored/cloudploy-openapi-generated.yml"
+  ],
+  "outputs": [
+    "cloudploy-apps-api-openapi.yml",
+    "cloudploy-deployments-api-openapi.yml",
+    "cloudploy-rollback-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (0 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "cloudploy-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "apis.yml register: written (+3 apis, 3 total)"
+  ],
+  "skipped": []
+}

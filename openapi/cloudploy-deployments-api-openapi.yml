@@ -1,0 +1,94 @@
+openapi: 3.2.0
+info:
+  title: CloudPloy Deployments API
+  version: '2026-10-15'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-10-15: 9 operation(s) read from 1 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; CloudPloy has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 1
+    documentation: 8
+    pages-with-code: 1
+    pages-read: 1
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-10-15'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://cloudploy.com/docs/api
+servers:
+- url: https://api.cloudploy.com
+security:
+- bearer: []
+tags:
+- name: Deployments
+paths:
+  /deployments:
+    get:
+      operationId: get_deployments
+      tags:
+      - Deployments
+      summary: List deployment history
+      x-source: https://cloudploy.com/docs/api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_deployments
+      tags:
+      - Deployments
+      summary: Trigger new deployment
+      x-source: https://cloudploy.com/docs/api
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostDeploymentsRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /deployments/{id}:
+    get:
+      operationId: get_deployments_id
+      tags:
+      - Deployments
+      summary: Get deployment status
+      x-source: https://cloudploy.com/docs/api
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostDeploymentsRequest:
+      type: object
+      properties:
+        app_id:
+          type: string
+          description: Identifier of the application to deploy
+        repository:
+          type: string
+          description: Repository to deploy from
+        branch:
+          type: string
+          description: Branch to deploy
+      required:
+      - app_id
+      - repository
+      - branch
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

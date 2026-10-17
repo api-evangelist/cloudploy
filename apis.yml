@@ -88,23 +88,54 @@ common:
   url: https://www.postman.com/cloudploy/workspace
 
 apis:
-- aid: cloudploy:cloudploy-api
-  name: CloudPloy API
-  description: 'CloudPloy API as documented publicly: 9 operations. Contract generated from the documentation by API Evangelist (2026-10-15);
-    not the provider''s own document.'
+- aid: cloudploy:cloudploy-apps-api
+  name: CloudPloy Apps API
+  description: The Apps API from CloudPloy — 3 operation(s) for apps.
   humanURL: https://cloudploy.com/docs/api
   baseURL: https://api.cloudploy.com
+  tags:
+  - Apps
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/cloudploy-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/cloudploy-apps-api-openapi.yml
   - type: JSONSchema
     url: json-schema/cloudploy-post-deployments-request-schema.json
   - type: JSONSchema
     url: json-schema/cloudploy-post-apps-request-schema.json
   - type: JSONSchema
     url: json-schema/cloudploy-post-v1-apps-request-schema.json
-
+- aid: cloudploy:cloudploy-deployments-api
+  name: CloudPloy Deployments API
+  description: The Deployments API from CloudPloy — 2 operation(s) for deployments.
+  humanURL: https://cloudploy.com/docs/api
+  baseURL: https://api.cloudploy.com
+  tags:
+  - Deployments
+  properties:
+  - type: OpenAPI
+    url: openapi/cloudploy-deployments-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-deployments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-apps-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-v1-apps-request-schema.json
+- aid: cloudploy:cloudploy-rollback-api
+  name: CloudPloy Rollback API
+  description: The Rollback API from CloudPloy — 1 operation(s) for rollback.
+  humanURL: https://cloudploy.com/docs/api
+  baseURL: https://api.cloudploy.com
+  tags:
+  - Rollback
+  properties:
+  - type: OpenAPI
+    url: openapi/cloudploy-rollback-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-deployments-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-apps-request-schema.json
+  - type: JSONSchema
+    url: json-schema/cloudploy-post-v1-apps-request-schema.json
 x-submission-notes: Deploy-from-agent control plane via MCP + API key
 
 x-submission-probe: root 200, docs 200, soft-404 OK; no OpenAPI found in docs page
